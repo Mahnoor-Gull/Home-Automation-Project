@@ -2,17 +2,60 @@
 
 ---
 
-## **📜 Arduino Code (home_automation.ino)**  
+```md
+# 🏡 Home Automation System 🌟  
 
+### **Automate Your Home with Arduino!**
+A **smart home automation system** that enhances security and convenience.  
+
+---
+
+## 📌 Overview  
+This **Arduino-powered Home Automation System** integrates:  
+✔️ **Servo motor** to automate doors  
+✔️ **PIR sensor** for motion detection  
+✔️ **Temperature sensor** to control fans  
+✔️ **LED indicator** for security  
+
+---
+
+## 🎯 Features  
+✅ **Hands-free door automation** using an ultrasonic sensor  
+✅ **LED activation** upon motion detection  
+✅ **Fan control** based on temperature  
+✅ **Compact and power-efficient design**  
+
+---
+
+## 🛠️ Components Required  
+| Component       | Quantity |
+|----------------|----------|
+| **Arduino Uno** | 1        |
+| **HC-SR04 Ultrasonic Sensor** | 1 |
+| **SG90 Servo Motor** | 1 |
+| **PIR Sensor** | 1 |
+| **LED** | 1 |
+| **Temperature Sensor (LM35)** | 1 |
+| **Jumper Wires** | - |
+| **Power Source (5V)** | 1 |
+
+---
+
+## ⚙️ Circuit Diagram  
+📌 *Connect the components as follows:*  
+
+- **Servo Motor** → Pin **8**  
+- **Ultrasonic Sensor**:  
+  - Trig → Pin **7**  
+  - Echo → Pin **7** (shared)  
+- **PIR Sensor** → Pin **2**  
+- **LED Indicator** → Pin **4**  
+- **Fan Control** → Pins **12, 13**  
+- **Temperature Sensor (LM35)** → Analog Pin **A0**  
+- **VCC & GND** → **Power Supply**
+
+---
 ```cpp
-/*
-  🏡 Home Automation System 🌟
-  ----------------------------------------
-  Description:
-  - Controls a servo motor for automated door opening.
-  - Uses a PIR sensor to detect motion and trigger an LED.
-  - Reads temperature using an analog sensor to control a fan.
-*/
 
 #include <Servo.h>
 
@@ -97,65 +140,6 @@ float getDistance() {
     long duration = pulseIn(echoPin, HIGH);
     return (duration * 0.0343) / 2;  // Convert time to cm
 }
-```
-
----
-
-## **📖 README.md (Project Documentation)**  
-
-```md
-# 🏡 Home Automation System 🌟  
-
-### **Automate Your Home with Arduino!**
-A **smart home automation system** that enhances security and convenience.  
-
----
-
-## 📌 Overview  
-This **Arduino-powered Home Automation System** integrates:  
-✔️ **Servo motor** to automate doors  
-✔️ **PIR sensor** for motion detection  
-✔️ **Temperature sensor** to control fans  
-✔️ **LED indicator** for security  
-
----
-
-## 🎯 Features  
-✅ **Hands-free door automation** using an ultrasonic sensor  
-✅ **LED activation** upon motion detection  
-✅ **Fan control** based on temperature  
-✅ **Compact and power-efficient design**  
-
----
-
-## 🛠️ Components Required  
-| Component       | Quantity |
-|----------------|----------|
-| **Arduino Uno** | 1        |
-| **HC-SR04 Ultrasonic Sensor** | 1 |
-| **SG90 Servo Motor** | 1 |
-| **PIR Sensor** | 1 |
-| **LED** | 1 |
-| **Temperature Sensor (LM35)** | 1 |
-| **Jumper Wires** | - |
-| **Power Source (5V)** | 1 |
-
----
-
-## ⚙️ Circuit Diagram  
-📌 *Connect the components as follows:*  
-
-- **Servo Motor** → Pin **8**  
-- **Ultrasonic Sensor**:  
-  - Trig → Pin **7**  
-  - Echo → Pin **7** (shared)  
-- **PIR Sensor** → Pin **2**  
-- **LED Indicator** → Pin **4**  
-- **Fan Control** → Pins **12, 13**  
-- **Temperature Sensor (LM35)** → Analog Pin **A0**  
-- **VCC & GND** → **Power Supply**
-
----
   
 
 ---
