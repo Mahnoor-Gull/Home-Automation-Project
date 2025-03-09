@@ -153,19 +153,10 @@ float getDistance() {
 
 ---
 
-## 📷 Demo  
-![Image](https://github.com/user-attachments/assets/464069e6-f119-464f-8a7f-0f5f6b04f3dc)
----
-
 ## 💡 Future Improvements  
 🔹 Add **Wi-Fi connectivity** for IoT control  
 🔹 Integrate a **mobile app** for remote access  
 🔹 Implement **voice control** with Google Assistant  
 
----
-
-
-```
-
----
+![Image](https://github.com/user-attachments/assets/464069e6-f119-464f-8a7f-0f5f6b04f3dc)
 
